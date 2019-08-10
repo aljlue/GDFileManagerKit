@@ -445,7 +445,7 @@
                                              }];
 }
 
-- (void)trashObjectID:(NSString *)objectID success:(void (^)())success failure:(void (^)(NSError *))failure
+- (void)trashObjectID:(NSString *)objectID success:(void (^)(void))success failure:(void (^)(NSError *))failure
 {
     NSParameterAssert(objectID);
     [self getCachedAccountInfoWithSuccess:^(GDSugarSyncAccountInfo *accountInfo) {

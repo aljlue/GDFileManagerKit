@@ -32,7 +32,7 @@
 
 - (void)getContentsOfCollectionID:(NSString *)collectionID success:(void (^)(NSArray *contents))success failure:(void (^)(NSError *error))failure;
 
-- (void)trashObjectID:(NSString *)objectID success:(void (^)())success failure:(void (^)(NSError *error))failure;
+- (void)trashObjectID:(NSString *)objectID success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
 - (void)copyFileID:(NSString *)objectID toFolderID:(NSString *)folderID name:(NSString *)name success:(void (^)(NSString *newFileID))success failure:(void (^)(NSError *error))failure;
 - (void)moveObjectID:(NSString *)objectID toFolderID:(NSString *)folderID name:(NSString *)name success:(void (^)())success failure:(void (^)(NSError *error))failure;
