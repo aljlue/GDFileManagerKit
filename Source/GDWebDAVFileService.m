@@ -23,6 +23,8 @@ static NSString *const GDWebDAV_HTTPSFileServiceURLScheme   = @"webdav+https";
 
 @implementation GDWebDAVFileService
 
+@synthesize clientManager;
+
 + (Class)clientManagerClass
 {
     return [GDWebDAVClientManager class];

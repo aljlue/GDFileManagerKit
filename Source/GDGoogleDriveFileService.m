@@ -22,6 +22,8 @@ static NSString *const GDGoogleDriveFileServiceURLScheme   = @"drive";
 
 @implementation GDGoogleDriveFileService
 
+@synthesize clientManager;
+
 + (Class)clientManagerClass
 {
     return [GDGoogleDriveClientManager class];

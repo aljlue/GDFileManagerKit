@@ -13,6 +13,7 @@
 
 @implementation GDDropboxCredential
 
+@synthesize apiToken;
 @synthesize authorisationHeader = _authorisationHeader;
 
 - (id)initWithUserID:(NSString *)userID apiToken:(GDDropboxAPIToken *)apiToken

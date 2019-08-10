@@ -22,6 +22,8 @@ static NSString *const GDSugarSyncFileServiceURLScheme   = @"sugarsync";
 
 @implementation GDSugarSyncFileService
 
+@synthesize clientManager;
+
 + (Class)clientManagerClass
 {
     return [GDSugarSyncClientManager class];

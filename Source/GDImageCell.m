@@ -12,6 +12,8 @@
 
 #define BORDER_WIDTH 20.0
 
+@synthesize imageView;
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];

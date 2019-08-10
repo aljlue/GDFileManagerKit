@@ -10,6 +10,7 @@
 
 @interface GDDropboxCredential ()
 
+
 - (id)initWithUserID:(NSString *)userID apiToken:(GDDropboxAPIToken *)apiToken oauthParameters:(NSDictionary *)oauthParams;
 
 @property (nonatomic, strong, readonly) NSString *authorisationHeader;

@@ -38,6 +38,8 @@
 
 @implementation GDWebDAVClient
 
+@synthesize baseURL;
+
 @dynamic credential;
 
 - (id)initWithClientManager:(GDClientManager *)clientManager credential:(GDClientCredential *)credential baseURL:(NSURL *)baseURL
