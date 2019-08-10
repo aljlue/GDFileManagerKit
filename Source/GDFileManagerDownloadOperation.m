@@ -88,7 +88,7 @@
                                               progress:self.downloadProgressBlock
                                                success:^(NSURL *localURL, GDURLMetadata *metadata) {
                                                    [fileManager cacheClientMetadata:metadata];
-                                                   _localDestinationFileURL = localURL;
+                                                   self->_localDestinationFileURL = localURL;
                                                    self.success(localURL, metadata);
                                                }
                                                failure:self.failure];

@@ -674,7 +674,7 @@ NSString *const GDFileManagerNewCacheFileNotification = @"GDFileManagerNewCacheF
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURL *modelURL = [GDFileManagerResourcesBundle() URLForResource:@"GDFileManagerDataCache" withExtension:@"momd"];
-        __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+        self->__managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     });
     return __managedObjectModel;
 }

@@ -25,8 +25,8 @@ NSDictionary *GDParametersFromURLQueryStringWithEncoding(NSString *queryString, 
             // FIXME: report error
             continue;
         }
-        NSString *value = [kv[1] stringByReplacingPercentEscapesUsingEncoding:encoding];
-        NSString *key = [kv[0] stringByReplacingPercentEscapesUsingEncoding:encoding];
+        NSString *value = [kv[1] stringByRemovingPercentEncoding];
+        NSString *key = [kv[0] stringByRemovingPercentEncoding];
         [parameters setObject:value forKey:key];
     }
     

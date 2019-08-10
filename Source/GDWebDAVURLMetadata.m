@@ -47,7 +47,7 @@
 - (NSInteger)fileSize { return self.metadata.fileSize; }
 - (NSString *)fileVersionIdentifier { return self.metadata.eTag ?: self.metadata.lastModifiedString; }
 - (NSString *)filename { return [self.webDAVPath lastPathComponent]; }
-- (NSString *)webDAVPath { return [self.metadata.href stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; }
+- (NSString *)webDAVPath { return [self.metadata.href stringByRemovingPercentEncoding]; }
 
 - (NSString *)description
 {
