@@ -14,16 +14,16 @@
 
 @interface GDWebDAVClient : GDHTTPClient
 
-- (void)validateWebDAVServerWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure;
+- (void)validateWebDAVServerWithSuccess:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
 - (void)getMetadataForPath:(NSString *)path success:(void (^)(GDWebDAVMetadata *metadata))success failure:(void (^)(NSError *error))failure;
 - (void)getContentsOfDirectoryAtPath:(NSString *)path success:(void (^)(NSArray *contents))success failure:(void (^)(NSError *error))failure;
 - (void)getPROPFINDResponseForPath:(NSString *)path depth:(NSUInteger)depth success:(void (^)(NSArray *results))success failure:(void (^)(NSError *error))failure;
 
-- (void)deletePath:(NSString *)path success:(void (^)())success failure:(void (^)(NSError *error))failure;
+- (void)deletePath:(NSString *)path success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
-- (void)copyPath:(NSString *)sourcePath toPath:(NSString *)destinationPath success:(void (^)())success failure:(void (^)(NSError *error))failure;
-- (void)movePath:(NSString *)sourcePath toPath:(NSString *)destinationPath success:(void (^)())success failure:(void (^)(NSError *error))failure;
+- (void)copyPath:(NSString *)sourcePath toPath:(NSString *)destinationPath success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
+- (void)movePath:(NSString *)sourcePath toPath:(NSString *)destinationPath success:(void (^)(void))success failure:(void (^)(NSError *error))failure;
 
 - (NSOperation *)downloadFile:(NSString *)remotePath intoPath:(NSString *)localPath
                      progress:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))progress
